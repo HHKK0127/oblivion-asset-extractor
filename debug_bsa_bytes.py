@@ -8,9 +8,7 @@ from pathlib import Path
 import struct
 import zlib
 
-BSA_PATH = Path(os.environ.get(
-    'OBLIVION_BSA_PATH',
-    r'D:\Cargo\Oblivion_Android\BSA\bsa_Original\Oblivion - Textures - Compressed.bsa'))
+BSA_PATH = Path(os.environ['OBLIVION_BSA_PATH'])
 
 with BSA_PATH.open('rb') as f:
     # Read 36-byte header (BSA v103)

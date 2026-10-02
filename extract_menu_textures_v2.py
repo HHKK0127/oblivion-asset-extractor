@@ -142,12 +142,8 @@ def extract_oblivion_bsa(bsa_path, output_dir, target_filenames):
 
 
 if __name__ == '__main__':
-    bsa_path = os.environ.get(
-        'OBLIVION_BSA_PATH',
-        r'D:\Cargo\Oblivion_Android\BSA\bsa_Original\Oblivion - Textures - Compressed.bsa')
-    output_dir = os.environ.get(
-        'OBLIVION_OUTPUT_DIR',
-        r'C:\Users\hiroki.kogarumai\Oblivion_Android\textures_extracted')
+    bsa_path = os.environ['OBLIVION_BSA_PATH']
+    output_dir = os.environ['OBLIVION_OUTPUT_DIR']
 
     target_files = [
         'loading_background.dds',

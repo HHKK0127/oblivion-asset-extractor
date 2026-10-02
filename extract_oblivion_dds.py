@@ -12,12 +12,8 @@ import struct
 import zlib
 from pathlib import Path
 
-BSA_PATH = Path(os.environ.get(
-    'OBLIVION_BSA_PATH',
-    r'D:\Cargo\Oblivion_Android\BSA\bsa_Original\Oblivion - Textures - Compressed.bsa'))
-OUT_DIR = Path(os.environ.get(
-    'OBLIVION_OUTPUT_DIR',
-    r'C:\Users\hiroki.kogarumai\Oblivion_Android\textures_extracted'))
+BSA_PATH = Path(os.environ['OBLIVION_BSA_PATH'])
+OUT_DIR = Path(os.environ['OBLIVION_OUTPUT_DIR'])
 
 SIZE_MASK = 0x3fffffff
 COMPRESSED_MASK = 0x40000000

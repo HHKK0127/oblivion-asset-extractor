@@ -23,12 +23,8 @@ def _patched_decode(self, obj, context, path):
         return zlib.decompress(obj, -15)  # raw deflate fallback
 construct.Compressed._decode = _patched_decode
 
-BSA_PATH = Path(os.environ.get(
-    'OBLIVION_BSA_PATH',
-    r'D:\Cargo\Oblivion_Android\BSA\bsa_Original\Oblivion - Textures - Compressed.bsa'))
-OUT_DIR  = Path(os.environ.get(
-    'OBLIVION_OUTPUT_DIR',
-    r'C:\Users\hiroki.kogarumai\Oblivion_Android\textures_extracted'))
+BSA_PATH = Path(os.environ['OBLIVION_BSA_PATH'])
+OUT_DIR  = Path(os.environ['OBLIVION_OUTPUT_DIR'])
 
 # Files to extract (lowercase compare)
 TARGETS = [

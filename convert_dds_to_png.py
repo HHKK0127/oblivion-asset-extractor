@@ -9,12 +9,8 @@ import os
 from PIL import Image
 from pathlib import Path
 
-SRC_DIR = Path(os.environ.get(
-    'OBLIVION_DDS_SRC_DIR',
-    r'C:\Users\hiroki.kogarumai\Oblivion_Android\textures_extracted\textures\menus\loading'))
-DST_DIR = Path(os.environ.get(
-    'OBLIVION_PNG_DST_DIR',
-    r'C:\Users\hiroki.kogarumai\Oblivion_Android\app\src\main\assets\textures\ui'))
+SRC_DIR = Path(os.environ['OBLIVION_DDS_SRC_DIR'])
+DST_DIR = Path(os.environ['OBLIVION_PNG_DST_DIR'])
 
 # Map source DDS to destination PNG name
 CONVERT_MAP = {

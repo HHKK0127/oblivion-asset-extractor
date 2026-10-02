@@ -153,12 +153,8 @@ def extract_loading_textures(bsa_path, output_dir):
         print(f"\nDone! Extracted {extracted} files to {output_dir}")
 
 if __name__ == '__main__':
-    bsa_path = os.environ.get(
-        'OBLIVION_BSA_PATH',
-        r'D:\Cargo\Oblivion_Android\BSA\Oblivion - Textures.bsa')
-    output_dir = os.environ.get(
-        'OBLIVION_OUTPUT_DIR',
-        r'C:\Users\hiroki.kogarumai\Oblivion_Android\textures_extracted')
+    bsa_path = os.environ['OBLIVION_BSA_PATH']
+    output_dir = os.environ['OBLIVION_OUTPUT_DIR']
     
     if not os.path.exists(bsa_path):
         print(f"BSA not found: {bsa_path}")

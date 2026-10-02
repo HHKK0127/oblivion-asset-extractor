@@ -24,20 +24,21 @@ These scripts extract DDS textures from Oblivion BSA files and convert them to P
 
 ## Configuration
 
-All scripts read paths from environment variables. If an environment variable is
-not set, a default (the original developer's local path) is used.
+All scripts read paths from environment variables. The required variables must
+be set before running a script; the script fails with a `KeyError` if one is
+missing.
 
-| Environment variable | Used by | Default |
-|----------------------|---------|---------|
-| `OBLIVION_BSA_PATH` | All extractors and debug scripts | `D:\Cargo\Oblivion_Android\BSA\bsa_Original\Oblivion - Textures - Compressed.bsa` |
-| `OBLIVION_OUTPUT_DIR` | All extractors | `C:\Users\hiroki.kogarumai\Oblivion_Android\textures_extracted` |
-| `OBLIVION_DDS_SRC_DIR` | `convert_dds_to_png.py` | `C:\Users\hiroki.kogarumai\Oblivion_Android\textures_extracted\textures\menus\loading` |
-| `OBLIVION_PNG_DST_DIR` | `convert_dds_to_png.py` | `C:\Users\hiroki.kogarumai\Oblivion_Android\app\src\main\assets\textures\ui` |
+| Environment variable | Used by |
+|----------------------|---------|
+| `OBLIVION_BSA_PATH` | All extractors and debug scripts |
+| `OBLIVION_OUTPUT_DIR` | All extractors |
+| `OBLIVION_DDS_SRC_DIR` | `convert_dds_to_png.py` |
+| `OBLIVION_PNG_DST_DIR` | `convert_dds_to_png.py` |
 
 ### Example
 
 ```powershell
-$env:OBLIVION_BSA_PATH = "D:\Games\Oblivion\Data\Oblivion - Textures - Compressed.bsa"
+$env:OBLIVION_BSA_PATH = "C:\Games\Oblivion\Data\Oblivion - Textures - Compressed.bsa"
 $env:OBLIVION_OUTPUT_DIR = "C:\extracted"
 python extract_oblivion_dds.py
 ```
